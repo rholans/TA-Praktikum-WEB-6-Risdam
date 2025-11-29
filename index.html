@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard - Final Version</title>
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- OUR CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🌤 Weather Dashboard</h1>
+        <button class="toggle-btn" id="themeToggle">Toggle Theme</button>
+        <button class="toggle-btn" id="unitToggle">°C</button>
+        <button class="toggle-btn" id="refreshBtn">⟳ Refresh</button>
+    </header>
+
+    <div class="search-section">
+        <h3>🔍 Cari Kota</h3>
+        <input type="text" id="cityInput" placeholder="Contoh: Jakarta, Tokyo">
+        <button class="search-btn" id="searchBtn">Cari</button>
+
+        <ul id="suggestions" class="suggestions-list"></ul>
+
+        <h4 style="margin-top:10px;">⭐ Favorite Cities</h4>
+        <div id="favoritesList"></div>
+        <button class="toggle-btn" id="saveFavorite" style="margin-top:10px;">Tambah ke Favorite</button>
+    </div>
+
+    <div class="status-bar">
+        <span id="statusText">Ready</span>
+        <span id="lastUpdate">Last update: -</span>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="weatherContent">
+        <h2 id="locationName"></h2>
+        <p id="weatherTime" style="opacity:.7;"></p>
+
+        <div class="weather-icon" id="weatherIcon"></div>
+        <div class="temperature" id="temperature"></div>
+        <div id="weatherDesc"></div>
+
+        <div class="weather-details">
+            <div class="detail-item">Humidity<br><span id="humidity"></span></div>
+            <div class="detail-item">Wind<br><span id="windSpeed"></span></div>
+            <div class="detail-item">Feels Like<br><span id="feelsLike"></span></div>
+            <div class="detail-item">Pressure<br><span id="pressure"></span></div>
+            <div class="detail-item">Visibility<br><span id="visibility"></span></div>
+            <div class="detail-item">Cloudiness<br><span id="cloudiness"></span></div>
+        </div>
+    </div>
+
+    <div class="forecast-section">
+        <h3>📅 5-Day Forecast</h3>
+        <div class="forecast-grid" id="forecastGrid"></div>
+    </div>
+
+</div>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

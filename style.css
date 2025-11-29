@@ -1,0 +1,125 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #0b1020;
+    color: #eef2ff;
+    font-family: Segoe UI;
+    padding: 20px;
+    transition: .3s;
+}
+body.light {
+    background: #f1f5f9;
+    color: #0b1020;
+}
+
+.container{ max-width:1200px; margin:auto; }
+
+:root{
+    --bg-card:#0f1724;
+    --text:#eef2ff;
+    --accent:#38b2ac;
+    --border:rgba(255,255,255,0.06);
+}
+body.light{
+    --bg-card:#ffffff;
+    --text:#0b1020;
+    --accent:#2563eb;
+    --border:rgba(0,0,0,0.15);
+}
+
+header{
+    background:var(--bg-card);
+    padding:15px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    margin-bottom:20px;
+}
+
+h1{ color:var(--accent); }
+
+.toggle-btn, .search-btn{
+    background:var(--accent);
+    color:#fff;
+    padding:10px 16px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.search-section, .status-bar, .main-weather, .forecast-section{
+    background:var(--bg-card);
+    padding:18px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid var(--border);
+    background:#101725;
+    color:var(--text);
+}
+body.light input{
+    background:#e2e8f0;
+    color:#0b1020;
+}
+
+.suggestions-list{
+    background:#1a2238;
+    margin-top:8px;
+    border-radius:6px;
+    list-style:none;
+    padding:0;
+    max-height:150px;
+    overflow-y:auto;
+}
+.suggestions-list li{
+    padding:10px;
+    cursor:pointer;
+}
+.suggestions-list li:hover{
+    background:#222c44;
+}
+
+#map{ width:100%; height:300px; border-radius:10px; margin-bottom:20px; }
+
+.weather-icon{ font-size:4rem; }
+.temperature{ font-size:3rem; color:var(--accent); }
+
+.weather-details{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:12px;
+    margin-top:20px;
+}
+.detail-item{
+    background:#101725;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid var(--border);
+    text-align:center;
+}
+
+.forecast-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px;
+}
+.forecast-card{
+    background:#101725;
+    padding:12px;
+    border-radius:8px;
+    text-align:center;
+    border:1px solid var(--border);
+}
+
+.favorite-city{
+    background:#1a2238;
+    padding:6px 12px;
+    border-radius:999px;
+    cursor:pointer;
+    margin-right:6px;
+}
